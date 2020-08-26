@@ -97,6 +97,6 @@ one hundred years later............
 
 ![image-20200821222052042](pictures/image-20200821222052042.png)
 
-Yes GET !
+Yes!  Get It!
 
 话说这片儿里妹子不错，爱了爱了。
