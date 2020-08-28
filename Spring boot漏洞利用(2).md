@@ -56,7 +56,7 @@ Content-Length: 2
 
 dnslog平台成功收到了
 
-![image-20200828161038262](pictures/image-20200828161038262.png)
+![image-20200828202729748](pictures/image-20200828202729748.png)
 
 ### Spring Boot + H2数据库JNDI注入RCE
 
