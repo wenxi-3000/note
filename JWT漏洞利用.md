@@ -198,7 +198,7 @@ eyJ0eXAiOiJqd3QiLCJhbGciOiJub25lIn0.eyJ1c2VyTmFtZSI6ImFkbWluIiwicHdkIjoiYWRtaW4i
 
 脚本：https://github.com/ShadowFlow123/JwtExploit/blob/master/jwtBrute.py
 
-成功爆破出key：admin
+成功爆破出key：admin（这里说名一下，这道题你的用户名是啥，解出来的key就是啥，网上的文章说的都是"2"，明显有问题）
 
 **3. 构造JWT **
 
