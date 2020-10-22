@@ -1,5 +1,9 @@
 ShadowFlow的博客
 
+##### [JWT漏洞利用](https://github.com/ShadowFlow123/ShadowFlow123.github.io/blob/master/JWT%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8.md)
+
+##### [赣网杯2020部分ctf题目详解](https://github.com/ShadowFlow123/ShadowFlow123.github.io/blob/master/%E8%B5%A3%E7%BD%91%E6%9D%AF2020%E9%83%A8%E5%88%86ctf%E9%A2%98%E7%9B%AE%E8%AF%A6%E8%A7%A3.md)
+
 ##### [强网杯2019-随便注题目分析](https://github.com/ShadowFlow123/ShadowFlow123.github.io/blob/master/%E5%BC%BA%E7%BD%91%E6%9D%AF2019-%E9%9A%8F%E4%BE%BF%E6%B3%A8%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90.md)
 
 ##### [Spring boot漏洞利用(2)](https://github.com/ShadowFlow123/ShadowFlow123.github.io/blob/master/Spring%20boot%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8(2).md)
